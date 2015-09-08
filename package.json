@@ -1,0 +1,40 @@
+{
+  "name": "mithril-admin",
+  "version": "0.0.1",
+  "description": "Mithril.js based admin interface for RestFull web-services. ",
+  "main": "lib/client/index.js",
+  "scripts": {
+    "test": "node ./node_modules/.bin/mocha ./lib/**/*.test.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kopa-app/mithril-admin.git"
+  },
+  "keywords": [
+    "kopa",
+    "mithril",
+    "admin",
+    "rest",
+    "web-service"
+  ],
+  "author": "Ondrej Brinkel <info@kopa.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kopa-app/mithril-admin/issues"
+  },
+  "homepage": "https://github.com/kopa-app/mithril-admin",
+  "dependencies": {
+    "dashify": "^0.1.0",
+    "lodash": "^3.10.1",
+    "mithril": "^0.2.0",
+    "pluralize": "^1.1.6"
+  },
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.2",
+    "watchify": "^3.4.0",
+    "express": "^4.13.3"
+  }
+}
