@@ -58,6 +58,16 @@ body {
   margin: 0 0.5rem 0.5rem 0;
   cursor: pointer;
 }
+.m-admin-button:hover,
+.m-admin-button:active,
+.m-admin-button:focus {
+  background-color: lightgray;
+}
+.m-admin-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: gray;
+}
 
 .m-admin-load-indicator {
   position: fixed;
@@ -68,18 +78,30 @@ body {
   pointer-events: none;
 }
 
-.m-admin-form fieldset {
+.m-admin-form fieldset,
+.m-admin-group {
   margin-bottom: 1rem;
   border: 1px solid gray;
   border-radius: 3px;
   padding: 0.5rem 1rem;
 }
 
-.m-admin-form legend .m-admin-button {
+.m-admin-group-toggle {
   padding: 0.25em;
   font-weight: bold;
 }
 
 .m-admin-form-errors {
   color: red;
+}
+
+.m-admin-pagination ul {
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+  text-align: center;
+}
+.m-admin-pagination li {
+  display: inline-block;
+  margin: 0 0.5rem;
 }
