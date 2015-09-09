@@ -36,6 +36,11 @@ body {
   width: 50%;
 }
 
+.m-admin-field-input input[type="checkbox"],
+.m-admin-field-input input[type="radio"] {
+  width: auto;
+}
+
 .m-admin-field-input input,
 .m-admin-field-input textarea,
 .m-admin-field-input select {
