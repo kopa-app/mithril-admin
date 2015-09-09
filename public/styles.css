@@ -1,9 +1,85 @@
-table {
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+
+.m-admin-list > table {
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
 }
-table td, table th {
+.m-admin-list > table td,
+.m-admin-list > table th {
   border: 1px solid gray;
   padding: 0.5rem;
+}
+
+.m-admin-field {
+  margin-bottom: 1rem;
+}
+
+.m-admin-field-label {
+  display: inline-block;
+  width: 40%;
+  vertical-align: top;
+  position: relative;
+  top: 0.25em;
+}
+
+.m-admin-field-input input,
+.m-admin-field-input textarea,
+.m-admin-field-input select,
+.m-admin-field-value {
+  display: inline-block;
+  width: 50%;
+}
+
+.m-admin-field-input input,
+.m-admin-field-input textarea,
+.m-admin-field-input select {
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 0.5em;
+}
+
+.m-admin-button {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-align: center;
+  line-height: 1;
+  box-sizing: border-box;
+  border: none;
+  background-color: gray;
+  color: white;
+  border-radius: 3px;
+  text-decoration: none;
+  margin: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+}
+
+.m-admin-load-indicator {
+  position: fixed;
+  top: 49vh;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.m-admin-form fieldset {
+  margin-bottom: 1rem;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+}
+
+.m-admin-form legend .m-admin-button {
+  padding: 0.25em;
+  font-weight: bold;
+}
+
+.m-admin-form-errors {
+  color: red;
 }
