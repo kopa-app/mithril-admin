@@ -93,8 +93,8 @@ app
           geo: {
             component: 'group',
             fields: {
-              lat: { component: 'number', min: -180, max: 180 },
-              lng: { component: 'number', min: -180, max: 180 }
+              lat: { component: 'number', min: -180, max: 180, step: 0.00001 },
+              lng: { component: 'number', min: -180, max: 180, step: 0.00001 }
             }
           }
         }
