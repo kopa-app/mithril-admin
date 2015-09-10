@@ -94,6 +94,7 @@ body {
 .m-admin-group-toggle {
   padding: 0.25em;
   font-weight: bold;
+  vertical-align: middle;
 }
 
 .m-admin-form-errors {
