@@ -7,7 +7,7 @@ var browserify = require('browserify');
 var cachedBundle = '';
 var env = process.env.NODE_ENV || 'development';
 var port = process.env.PORT || 4000;
-var b = browserify(require.resolve('./lib/client/example'));
+var b = browserify(require.resolve('./example'));
 
 function onBundle(err, buf) {
   if (err) {
@@ -34,6 +34,6 @@ app.get('/app.js', function (req, res, next) {
   res.send(cachedBundle);
 });
 
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, './example/public')));
 app.listen(port);
 console.log('listening on http://localhost:' + port);

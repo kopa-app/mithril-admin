@@ -1,13 +1,17 @@
 'use strict';
 
 var m = require('mithril');
-var admin = require('./index');
+var admin = require('../lib/client'); // do require('mithril-admin') in your app
 
+// set router to hash mode
 m.route.mode = 'hash';
 
+// create admin app
 var app = admin({
-  basePath: '/admin',
+  basePath: '/admin', // mount to /admin route
   restUrl: 'http://jsonplaceholder.typicode.com',
+
+  // we override the load method to adjust pagination
   load: function (resource, query) {
     if (query && typeof query === 'object' && query.page && query.perPage) {
       query._start = (query.page - 1) * query.perPage;
@@ -17,10 +21,12 @@ var app = admin({
       delete query.perPage;
     }
 
+    // reuse existing load method
     return app.resource.load(resource, query);
   }
 });
 
+// define resources
 app
   .resource('Post', {
     listFields: ['title'],
@@ -56,7 +62,7 @@ app
         previewUrl: function (item) {
           return item.thumbnailUrl;
         },
-        fullUrl: function (item) {
+        imageUrl: function (item) {
           return item.url;
         }
       },
@@ -106,5 +112,7 @@ app
       todos: { component: 'relation', resource: 'Todo', relationType: 'hasMany' }
     },
     listFields: ['name', 'email']
-  })
-  .mount(document.getElementById('app'));
+  });
+
+// now inject the app into our page
+app.mount(document.getElementById('app'));

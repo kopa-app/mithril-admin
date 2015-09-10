@@ -16,6 +16,8 @@ $ npm start
 
 This will start an example app at [http://localhost:4000](http://localhost:4000).
 
+Views it's source in the `/example` folder.
+
 ## Integrate in your (mithril) app
 
 ```javascript
@@ -60,9 +62,9 @@ app
     listFields: ['name', 'email']
   });
 
-  // mount into an existing DOM element
-  app.mount(document.getElementById('app'));
+// mount into an existing DOM element
+app.mount(document.getElementById('app'));
 
-  // or retrieve mithril routes you can use in m.route()
-  var routes = app.routes();
+// or retrieve mithril routes you can use in m.route()
+var routes = app.routes();
 ```
