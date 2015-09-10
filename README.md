@@ -16,7 +16,7 @@ $ npm start
 
 This will start an example app at [http://localhost:4000](http://localhost:4000).
 
-Views it's source in the `/example` folder.
+Views it's source in the [/example](tree/master/example) folder.
 
 ## Integrate in your (mithril) app
 
