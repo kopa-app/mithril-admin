@@ -28,7 +28,8 @@
     "dashify": "^0.1.0",
     "lodash": "^3.10.1",
     "mithril": "^0.2.0",
-    "pluralize": "^1.1.6"
+    "pluralize": "^1.1.6",
+    "superagent": "^1.3.0"
   },
   "devDependencies": {
     "browserify": "^11.0.1",

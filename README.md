@@ -24,6 +24,12 @@ var admin = require('mithril-admin');
 var app = admin({
   basePath: '/admin', // default = '' base path for the router
   restUrl: 'http://jsonplaceholder.typicode.com' // default = '/' base URL to your RestFul web-service
+  load: function (resource, query) {
+    // override load method here
+
+    // or reuse existing
+    return app.resource.load(resource, query);
+  }
 });
 
 app
