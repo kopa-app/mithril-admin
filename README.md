@@ -1,5 +1,10 @@
 # Mithril-Admin
 
+<a href="https://gitter.im/kopa-app/mithril-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge" target="gitter"
+   title="Join the chat at https://gitter.im/kopa-app/mithril-admin">
+  <img src="https://badges.gitter.im/Join%20Chat.svg" alt="gitter | join chat >" />
+</a>
+
 An automatic Admin Interface for your RestFull web-service using mithril.js.
 
 ## Installation
