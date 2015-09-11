@@ -34,8 +34,9 @@
   "devDependencies": {
     "browserify": "^11.0.1",
     "expect.js": "^0.3.1",
+    "express": "^4.13.3",
+    "mithril-query": "^0.7.6",
     "mocha": "^2.3.2",
-    "watchify": "^3.4.0",
-    "express": "^4.13.3"
+    "watchify": "^3.4.0"
   }
 }
