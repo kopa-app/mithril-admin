@@ -70,3 +70,11 @@ app.mount(document.getElementById('app'));
 // or retrieve mithril routes you can use in m.route()
 var routes = app.routes();
 ```
+
+## Hacking
+
+Run tests
+
+```bash
+$ npm test
+```
