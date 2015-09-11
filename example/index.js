@@ -37,7 +37,7 @@ app
         component: 'relation',
         resource: 'User',
         relationType: 'belongsTo',
-        itemsComponent: 'resourceList'
+        itemsComponent: 'resourceList' // displays resources inline
       },
       comments: { component: 'relation', resource: 'Comment', relationType: 'hasMany' }
     }
