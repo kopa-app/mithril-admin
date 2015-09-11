@@ -33,7 +33,12 @@ app
     fields: {
       title: { component: 'text', required: true },
       body: { component: 'textarea', required: true },
-      userId: { component: 'relation', resource: 'User', relationType: 'belongsTo' },
+      userId: {
+        component: 'relation',
+        resource: 'User',
+        relationType: 'belongsTo',
+        itemsComponent: 'resourceList'
+      },
       comments: { component: 'relation', resource: 'Comment', relationType: 'hasMany' }
     }
   })
