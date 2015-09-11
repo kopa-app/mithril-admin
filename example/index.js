@@ -3,9 +3,6 @@
 var m = require('mithril');
 var admin = require('../lib/client'); // do require('mithril-admin') in your app
 
-// set router to hash mode
-m.route.mode = 'hash';
-
 // create admin app
 var app = admin({
   basePath: '/admin', // mount to /admin route
