@@ -114,7 +114,8 @@ app
           bs: { component: 'text' }
         }
       },
-      todos: { component: 'relation', resource: 'Todo', relationType: 'hasMany' }
+      todos: { component: 'relation', resource: 'Todo', relationType: 'hasMany' },
+      posts: { component: 'relation', resource: 'Post', relationType: 'hasMany' }
     },
     listFields: ['name', 'email']
   });
