@@ -43,6 +43,7 @@ m.route(document.getElementById('app'), '/', routes);
   basePath: '', // base path for the admin routes
   restUrl: '/', // root URL to your REST-Service
   perPage: 10, // number of items per page in lists
+  snakeCase: false, // if true, foreign keys are snake_case, instead of camelCase
 
   // function that loads one or more items of type "resource"
   // must return a promise
