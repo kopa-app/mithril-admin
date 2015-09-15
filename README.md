@@ -20,6 +20,9 @@ This will start an example app at [http://localhost:4000](http://localhost:4000)
 
 Views it's source in the [/example](https://github.com/kopa-app/mithril-admin/tree/master/example) folder.
 
+**[Checkout the full documentation](docs/index.md)** or read below for a simple example.
+
+
 ## Integrate in your (mithril) app
 
 ```javascript
