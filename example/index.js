@@ -117,10 +117,18 @@ app
           bs: { component: 'text' }
         }
       },
+      role: {
+        component: 'select',
+        options: [
+          { value: 'admin', label: 'Adminstrator' },
+          { value: 'manager', label: 'Manager' },
+          { value: 'guest', label: 'Guest' }
+        ]
+      },
       todos: { component: 'relation', resource: 'Todo', relationType: 'hasMany' },
       posts: { component: 'relation', resource: 'Post', relationType: 'hasMany' }
     },
-    listFields: ['name', 'email']
+    listFields: ['name', 'email', 'role']
   });
 
 // now inject the app into our page

@@ -18,7 +18,8 @@ body {
   padding: 0.5rem;
 }
 
-.m-admin-list-item-field-published {
+.m-admin-list-item-field-published,
+.m-admin-list-item-field-role {
   text-align: center;
 }
 
@@ -38,12 +39,15 @@ body {
   display: inline-block;
 }
 
+.m-admin-field-input,
+.m-admin-field-value {
+  width: 50%;
+}
+
 .m-admin-field-input input,
 .m-admin-field-input textarea,
-.m-admin-field-input select,
-.m-admin-field-value {
-  display: inline-block;
-  width: 50%;
+.m-admin-field-input select {
+  width: 100%;
 }
 
 .m-admin-field-input input[type="checkbox"],
@@ -149,7 +153,7 @@ body {
   display: inline-block;
 }
 
-.m-admin-field-image-value input {
+.m-admin-field-image {
   width: 100%;
 }
 
