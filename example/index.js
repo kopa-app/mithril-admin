@@ -6,7 +6,7 @@ var admin = require('../lib/client'); // do require('mithril-admin') in your app
 // create admin app
 var app = admin({
   basePath: '/admin', // mount to /admin route
-  restUrl: 'http://jsonplaceholder.typicode.com',
+  restUrl: '/api',
 
   // we override the load method to adjust pagination
   load: function (resource, query) {
@@ -26,10 +26,12 @@ var app = admin({
 // define resources
 app
   .resource('Post', {
-    listFields: ['title'],
     fields: {
       title: { component: 'text', required: true },
       body: { component: 'textarea', required: true },
+      createdAt: { component: 'datetime', dateTimeFormat: 'YYYY/MM/DD hh:mm:ss', readonly: true },
+      publishAt: { component: 'datetime', dateTimeFormat: 'YYYY/MM/DD hh:mm', granularity: 'minutes' },
+      published: { component: 'checkbox' },
       userId: {
         component: 'relation',
         resource: 'User',
@@ -37,16 +39,19 @@ app
         itemsComponent: 'resourceList' // displays resources inline
       },
       comments: { component: 'relation', resource: 'Comment', relationType: 'hasMany' }
-    }
+    },
+    listFields: ['title', 'published', 'publishAt']
   })
   .resource('Comment', {
     fields: {
       name: { component: 'text', required: true },
       email: { component: 'email', required: true },
       body: { component: 'textarea', required: true },
+      createdAt: { component: 'datetime', dateTimeFormat: 'YYYY/MM/DD hh:mm', granularity: 'minutes', readonly: true },
+      published: { component: 'checkbox' },
       postId: { component: 'relation', resource: 'Post', relationType: 'belongsTo' }
     },
-    listFields: ['name', 'email']
+    listFields: ['name', 'email', 'published', 'createdAt']
   })
   .resource('Album', {
     fields: {
@@ -68,9 +73,10 @@ app
           return item.url;
         }
       },
+      takenAt: { component: 'datetime', dateTimeFormat: 'YYYY/MM/DD hh:mm:ss', dateFormat: 'YYYY/MM/DD' },
       albumId: { component: 'relation', resource: 'Album', relationType: 'belongsTo' }
     },
-    listFields: ['title', 'url']
+    listFields: ['title', 'url', 'takenAt']
   })
   .resource('Todo', {
     fields: {
@@ -107,7 +113,7 @@ app
         component: 'group',
         fields: {
           name: { component: 'text' },
-          chatPhrase: { component: 'text' },
+          catchPhrase: { component: 'text' },
           bs: { component: 'text' }
         }
       },

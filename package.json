@@ -1,6 +1,6 @@
 {
   "name": "mithril-admin",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Mithril.js based admin interface for RestFull web-services. ",
   "main": "lib/client/index.js",
   "scripts": {
@@ -28,6 +28,8 @@
     "dashify": "^0.1.0",
     "lodash": "^3.10.1",
     "mithril": "^0.2.0",
+    "moment": "^2.10.6",
+    "pikaday": "^1.4.0",
     "pluralize": "^1.1.6",
     "superagent": "^1.3.0"
   },
@@ -35,6 +37,8 @@
     "browserify": "^11.0.1",
     "expect.js": "^0.3.1",
     "express": "^4.13.3",
+    "faker": "^3.0.1",
+    "json-server": "^0.8.3",
     "mithril-query": "^0.7.6",
     "mocha": "^2.3.2",
     "watchify": "^3.4.0"

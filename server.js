@@ -8,6 +8,9 @@ var cachedBundle = '';
 var env = process.env.NODE_ENV || 'development';
 var port = process.env.PORT || 4000;
 var b = browserify(require.resolve('./example'));
+var JsonServer = require('json-server');
+var jsonServer = JsonServer.create();
+var jsonData = require('./lib/server/json_data');
 
 function onBundle(err, buf) {
   if (err) {
@@ -35,5 +38,10 @@ app.get('/app.js', function (req, res, next) {
 });
 
 app.use(express.static(path.join(__dirname, './example/public')));
+
+jsonServer.use(JsonServer.defaults());
+jsonServer.use(JsonServer.router(jsonData()));
+app.use('/api', jsonServer);
+
 app.listen(port);
 console.log('listening on http://localhost:' + port);

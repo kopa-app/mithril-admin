@@ -10,10 +10,16 @@ body {
   width: 100%;
   border-collapse: collapse;
 }
-.m-admin-list > table td,
-.m-admin-list > table th {
+
+.m-admin-list-item-field,
+.m-admin-list-item-actions,
+.m-admin-list-header-field {
   border: 1px solid gray;
   padding: 0.5rem;
+}
+
+.m-admin-list-item-field-published {
+  text-align: center;
 }
 
 .m-admin-field {
@@ -26,6 +32,10 @@ body {
   vertical-align: top;
   position: relative;
   top: 0.25em;
+}
+
+.m-admin-field-input {
+  display: inline-block;
 }
 
 .m-admin-field-input input,
@@ -132,4 +142,23 @@ body {
 
 .m-admin-remove-button.armed {
   background: red;
+}
+
+.m-admin-field-image {
+  margin: 0;
+  display: inline-block;
+}
+
+.m-admin-field-image-value input {
+  width: 100%;
+}
+
+input.m-admin-field-datetime-date {
+  width: 10em;
+}
+
+input.m-admin-field-datetime-hours,
+input.m-admin-field-datetime-minutes,
+input.m-admin-field-datetime-seconds {
+  width: 4em;
 }
