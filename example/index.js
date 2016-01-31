@@ -29,6 +29,7 @@ app
     fields: {
       title: { component: 'text', required: true },
       body: { component: 'textarea', required: true },
+      tags: { component: 'tags' },
       createdAt: { component: 'datetime', dateTimeFormat: 'YYYY/MM/DD hh:mm:ss', readonly: true },
       publishAt: { component: 'datetime', dateTimeFormat: 'YYYY/MM/DD hh:mm', dateFormat: 'YYYY/MM/DD', granularity: 'minutes' },
       published: { component: 'checkbox' },
