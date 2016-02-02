@@ -1,7 +1,12 @@
 'use strict';
 
+var qs = require('query-string');
 var m = require('mithril');
 var admin = require('../lib/client'); // do require('mithril-admin') in your app
+var primercss = require('mithril-admin-primercss');
+var bootstrap = require('mithril-admin-bootstrap');
+var query = qs.parse(window.location.search);
+var theme = query.theme || null;
 
 // create admin app
 var app = admin({
@@ -22,6 +27,15 @@ var app = admin({
     return app.resource.load(resource, query);
   }
 });
+
+
+// use primer css plugin
+if (theme === 'primercss') {
+  app.use(primercss());
+}
+else if (theme === 'bootstrap') {
+  app.use(bootstrap());
+}
 
 // define resources
 app

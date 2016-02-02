@@ -1,0 +1,51 @@
+.m-admin-pagination {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+}
+
+table th, table td {
+  padding: 0.1rem 0.5rem;
+  border: 1px solid #999;
+}
+table tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.m-admin-group {
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 1rem;
+}
+.m-admin-group-title {
+  font-weight: bold;
+  padding-right: 1rem;
+}
+.m-admin-group-toggle {
+  margin-right: 1rem;
+}
+
+.m-admin-field dt,
+.m-admin-field dd {
+  display: inline-block;
+}
+.m-admin-field dt {
+  width: 40%;
+}
+.m-admin-field dd {
+  width: 50%;
+}
+.m-admin-field-input {
+  width: 100%;
+}
+.m-admin-field input[type="checkbox"],
+.m-admin-field input[type="radio"] {
+  width: auto;
+}
+
+.m-admin-resource {
+  margin-bottom: 1rem;
+}

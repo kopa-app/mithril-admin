@@ -44,20 +44,14 @@ body {
   width: 50%;
 }
 
-.m-admin-field-input input,
-.m-admin-field-input textarea,
-.m-admin-field-input select {
-  width: 100%;
-}
-
-.m-admin-field-input input[type="checkbox"],
-.m-admin-field-input input[type="radio"] {
+.m-admin-field input[type="checkbox"],
+.m-admin-field input[type="radio"] {
   width: auto;
 }
 
-.m-admin-field-input input,
-.m-admin-field-input textarea,
-.m-admin-field-input select {
+.m-admin-field input,
+.m-admin-field textarea,
+.m-admin-field select {
   border: 1px solid gray;
   border-radius: 3px;
   padding: 0.5em;
@@ -127,13 +121,10 @@ body {
   color: red;
 }
 
-.m-admin-pagination ul {
-  list-style-type: none;
-  margin: 1rem 0;
-  padding: 0;
+.m-admin-pagination {
   text-align: center;
 }
-.m-admin-pagination li {
+.m-admin-pagination a, span {
   display: inline-block;
   margin: 0 0.5rem;
 }

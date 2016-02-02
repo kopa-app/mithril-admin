@@ -11,10 +11,33 @@
       <meta name="keywords" content="kopa,mithril,admin,rest,web-service">
 
       <link rel="shortcut icon" href="/favicon.ico">
-      <link rel="stylesheet" type="text/css" href="/styles.css">
+      ${themeStyles}
+      <!--<link rel="stylesheet" type="text/css" href="/styles.css">-->
       <link rel="stylesheet" type="text/css" href="/pikaday.css">
+
+      <style type="text/css">
+      #theme-switcher {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 0.5rem;
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+      }
+      #theme-switcher a {
+
+      }
+      </style>
   </head>
-  <body id="app">
+  <body>
+    <nav id="theme-switcher">
+      Choose theme:
+      <a href="/?theme=default">Default</a> |
+      <a href="/?theme=primercss">PrimerCSS</a> |
+      <a href="/?theme=bootstrap">Bootstrap</a>
+    </nav>
+    <div class="container" id="app"></div>
     <script type="text/javascript" src="/app.js"></script>
   </body>
 </html>
