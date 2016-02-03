@@ -15,12 +15,22 @@ var app = admin({
 
   // we override the load method to adjust pagination
   load: function (resource, query) {
-    if (query && typeof query === 'object' && query.page && query.perPage) {
-      query._start = (query.page - 1) * query.perPage;
-      delete query.page;
+    if (query && typeof query === 'object') {
+      if (query.page && query.perPage) {
+        query._start = (query.page - 1) * query.perPage;
+        delete query.page;
 
-      query._limit = query.perPage;
-      delete query.perPage;
+        query._limit = query.perPage;
+        delete query.perPage;
+      }
+      if (query.sortBy) {
+        query._sort = query.sortBy;
+        delete query.sortBy;
+      }
+      if (query.sortDir) {
+        query._order = query.sortDir.toUpperCase();
+        delete query.sortDir;
+      }
     }
 
     // reuse existing load method
@@ -55,7 +65,9 @@ app
       },
       comments: { component: 'relation', resource: 'Comment', relationType: 'hasMany' }
     },
-    listFields: ['title', 'published', 'publishAt']
+    listFields: ['title', 'published', 'publishAt'],
+    sortFields: ['id', 'publised', 'publishAt'],
+    filterFields: ['title', 'published', 'publishAt']
   })
   .resource('Comment', {
     fields: {
@@ -66,7 +78,9 @@ app
       published: { component: 'checkbox' },
       postId: { component: 'relation', resource: 'Post', relationType: 'belongsTo' }
     },
-    listFields: ['name', 'email', 'published', 'createdAt']
+    listFields: ['name', 'email', 'published', 'createdAt'],
+    sortFields: ['id', 'published', 'createdAt'],
+    filterFields: ['name', 'email', 'published', 'createdAt']
   })
   .resource('Album', {
     fields: {
@@ -74,7 +88,9 @@ app
       userId: { component: 'relation', resource: 'User', relationType: 'belongsTo' },
       photos: { component: 'relation', resource: 'Photo', relationType: 'hasMany' }
     },
-    listFields: ['title']
+    listFields: ['title'],
+    sortFields: ['id'],
+    filterFields: ['title']
   })
   .resource('Photo', {
     fields: {
@@ -91,7 +107,9 @@ app
       takenAt: { component: 'datetime', dateTimeFormat: 'YYYY/MM/DD hh:mm:ss', dateFormat: 'YYYY/MM/DD' },
       albumId: { component: 'relation', resource: 'Album', relationType: 'belongsTo' }
     },
-    listFields: ['title', 'url', 'takenAt']
+    listFields: ['title', 'url', 'takenAt'],
+    sortFields: ['id', 'takenAt'],
+    filterFields: ['title', 'takenAt']
   })
   .resource('Todo', {
     fields: {
@@ -99,7 +117,9 @@ app
       completed: { component: 'checkbox' },
       userId: { component: 'relation', resource: 'User', relationType: 'belongsTo' }
     },
-    listFields: ['title', 'completed']
+    listFields: ['title', 'completed'],
+    sortFields: ['id', 'title', 'completed'],
+    filterFields: ['title', 'completed']
   })
   .resource('User', {
     fields: {
@@ -143,7 +163,9 @@ app
       todos: { component: 'relation', resource: 'Todo', relationType: 'hasMany' },
       posts: { component: 'relation', resource: 'Post', relationType: 'hasMany' }
     },
-    listFields: ['name', 'email', 'role']
+    listFields: ['name', 'email', 'role'],
+    sortFields: ['id', 'name', 'role'],
+    filterFields: ['name', 'email', 'role']
   });
 
 // now inject the app into our page

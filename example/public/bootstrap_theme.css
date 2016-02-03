@@ -4,3 +4,16 @@
 .m-admin-group-toggle {
   margin-right: 1rem;
 }
+.m-admin-list-filters .form-group {
+  margin-right: 2rem;
+}
+.m-admin-list-filters-wrapper {
+  margin: 1rem 0;
+}
+.m-admin-list-filters label {
+  margin-right: 0.5rem;
+}
+.m-admin-list-filters-fields,
+.m-admin-list-filters-sort {
+  margin-bottom: 1rem;
+}
