@@ -43,7 +43,7 @@ app.get('/', function (req, res, next) {
   var themeStyles = {
     'default': '<link rel="stylesheet" type="text/css" href="/default_theme.css">',
     'primercss': '<link rel="stylesheet" type="text/css" href="/primer.css"><link rel="stylesheet" type="text/css" href="/primer_theme.css">',
-    'bootstrap': '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"><link rel="stylesheet" type="text/css" href="/bootstrap_theme.css">'
+    'bootstrap': '<link rel="stylesheet" href="/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="/bootstrap_theme.css">'
   };
 
   var theme = req.query.theme || 'default';
