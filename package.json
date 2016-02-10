@@ -1,6 +1,6 @@
 {
   "name": "mithril-admin",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Mithril.js based admin interface for RestFull web-services. ",
   "main": "lib/client/index.js",
   "scripts": {
