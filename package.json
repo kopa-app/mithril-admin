@@ -1,6 +1,6 @@
 {
   "name": "mithril-admin",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Mithril.js based admin interface for RestFull web-services. ",
   "main": "lib/client/index.js",
   "scripts": {
@@ -41,8 +41,8 @@
     "express": "4.13.3",
     "faker": "3.0.1",
     "json-server": "0.8.3",
-    "mithril-admin-primercss": "0.0.1",
-    "mithril-admin-bootstrapp": "0.0.1",
+    "mithril-admin-primercss": "0.0.2",
+    "mithril-admin-bootstrap": "0.0.2",
     "mithril-query": "0.7.6",
     "mocha": "2.3.2",
     "query-string": "^3.0.0",
