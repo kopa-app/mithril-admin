@@ -1,6 +1,6 @@
 {
   "name": "mithril-admin",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "Mithril.js based admin interface for RestFull web-services. ",
   "main": "lib/client/index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/kopa-app/mithril-admin",
   "dependencies": {
     "dashify": "0.1.0",
+    "es6-promise": "^3.0.2",
     "is-array": "1.0.1",
     "lodash": "3.10.1",
     "mithril": "0.2.0",
